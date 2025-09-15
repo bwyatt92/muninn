@@ -40,7 +40,7 @@ python main.py
 
 ## Family Members
 
-The system supports messages for: CARRIE, CASSIE, SCOTT, BEAU, LIZZIE, JEAN, NICK, DAKOTA, BEA, CHARLIE, ALLIE, LUKE, LYRA, TUI, SEVRO
+
 
 ## Project Structure
 
