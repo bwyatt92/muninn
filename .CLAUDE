@@ -1,0 +1,65 @@
+# Muninn - Family Voice Assistant
+
+## Project Context
+This is "Muninn", a personalized voice assistant being built as a 70th birthday gift. Named after the Norse raven of memory, it captures and preserves family stories for future generations.
+
+## Timeline
+- **Deadline**: 1 month 16 days until birthday
+- **Hardware arrival**: 1-2 weeks
+- **Current phase**: Software development on local machine
+
+## Hardware Configuration
+- **Raspberry Pi 5** (8GB RAM)
+- **Adafruit Voice Bonnet** [ID:4757] - I2S audio with dual microphones
+- **Speaker**: 3W 4Ω Enclosed [ID:3351]  
+- **LEDs**: NeoPixel strip 60 LED/meter, 0.5m [ID:3919]
+- **Case**: Custom cylindrical design with family names cut out for illumination
+
+## Family Members (LED Name Layout)
+15 names positioned around case circumference at 24° intervals:
+CARRIE, CASSIE, SCOTT, BEAU, LIZZIE, JEAN, NICK, DAKOTA, BEA, CHARLIE, ALLIE, LUKE, LYRA, TUI, SEVRO
+
+## Core Voice Commands
+- **"Muninn"** - Wake word (using Porcupine)
+- **"remember this"** - Start recording mode
+- **"play [name]'s messages"** - Playback specific person's recordings
+- **"stop"** - End current operation
+
+## Application States
+1. **IDLE** - Waiting for wake word, family names slowly cycling colors
+2. **LISTENING** - After wake word, waiting for command, pulsing blue
+3. **RECORDING** - Capturing audio, red indicator, stops on silence detection
+4. **PLAYING** - Audio playback, illuminate specific family member name
+5. **PROCESSING** - Brief thinking state between operations
+
+## Technical Services (Porcupine Free Tier)
+- Wake word detection: 1 monthly active user
+- Speech-to-text: 250 minutes/month
+- Voice activity detection: 1 monthly active user
+
+## Storage Strategy
+- **Local**: SQLite database + WAV files for immediate use
+- **Future**: Firestore sync for family access
+- **Backup**: Multiple cloud storage layers for preservation
+
+## Development Priority
+1. **Core state machine** - Voice command workflow
+2. **Audio pipeline** - Record/playback functionality
+3. **Mock hardware interfaces** - Development without Pi
+4. **Command parsing** - Natural language to actions
+5. **Database schema** - Message storage and retrieval
+
+## Success Criteria
+Device should successfully:
+- Wake on "Muninn" command
+- Record personal stories/memories
+- Play back pre-loaded birthday messages from family
+- Provide visual feedback through LED animations
+- Store recordings permanently for family archive
+
+## Development Notes
+- Start with mock interfaces for hardware components
+- Focus on state machine and command processing logic
+- Use local audio devices for initial testing
+- Modular architecture for easy hardware integration later
+- All audio in WAV format for archival quality
