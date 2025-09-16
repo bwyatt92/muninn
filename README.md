@@ -1,3 +1,5 @@
+![image](/images/muninn.png)
+
 # Muninn Voice Assistant
 
 A family voice assistant that records and plays back personal stories/memories. Named after the Norse raven of memory, this device captures family stories for posterity as a 70th birthday gift.
