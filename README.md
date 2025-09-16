@@ -42,6 +42,14 @@ python main.py
 
 The system supports messages for: CARRIE, CASSIE, SCOTT, BEAU, LIZZIE, JEAN, NICK, DAKOTA, BEA, CHARLIE, ALLIE, LUKE, LYRA, TUI, SEVRO
 
+## Future Enhancements
+
+See `FUTURE_FEATURES.md` for planned UI companion app that will allow:
+- Web/mobile interface for browsing stored memories
+- "Get a Memory" button for random story/joke/quote retrieval
+- Family member filtering and memory categorization
+- Remote access for family members anywhere
+
 ## Project Structure
 
 ```

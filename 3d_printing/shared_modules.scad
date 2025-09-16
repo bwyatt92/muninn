@@ -60,9 +60,10 @@ module main_body() {
         
         // LED name cutouts (positioned in middle height) - extended for proper through-holes
         translate([0, 0, case_height * 0.5]) {
-            names = ["CARRIE", "CASSIE", "SCOTT", "BEAU", "LIZZIE", "JEAN", "NICK", "DAKOTA", "BEA", "CHARLIE", "ALLIE", "LUKE", "LYRA", "TUI", "SEVRO"];
-            for(n = [0:14]) {
-                rotate([0, 0, n * 24])
+            names = ["CARRIE", "CASSIE", "SCOTT", "BEAU", "LIZZIE", "JEAN", "NICK", "DAKOTA", "BEA", "CHARLIE", "ALLIE", "LUKE", "LYRA", "TUI", "SEVRO", "DEAMBER", "CARYL"];
+            // 17 names evenly spaced around the circle (approximately 21.18° apart)
+            for(n = [0:16]) {
+                rotate([0, 0, n * (360/17)])
                     translate([case_diameter/2 - wall_thickness - 1, 0, 0])  // Start outside the wall
                         rotate([0, 90, 0])
                             linear_extrude(height=wall_thickness + 2)  // Extend beyond both sides
